@@ -7,5 +7,6 @@ Template Blogger downloaded from [soratemplates](https://www.soratemplates.com/2
 3. [Seo Services](https://www.soratemplates.com/p/seo-services.html)
 
 Reference image
+
 ![Thumbnail](./app/thumbnail.png)
 
