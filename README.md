@@ -9,5 +9,5 @@ Template Blogger downloaded from [soratemplates](https://www.soratemplates.com/2
 
 
 Reference image
-![Thumbnail](../app/thumbnail.png)
+![Thumbnail](./app/thumbnail.png)
 
