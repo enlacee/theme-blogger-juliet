@@ -3,7 +3,6 @@
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
-	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Noto+Sans:400,400i,700|Sacramento|Bad+Script' media='all' rel='stylesheet' type='text/css'/>
 	<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'/>
 	<b:include data='blog' name='all-head-content'/>
 	<title>
@@ -74,7 +73,7 @@ License:     Free Version
 <Variable name="headbgcolor" description="Header Background" type="color" default="#ffffff"  value="#ffffff"/>
 </Group>
 <Group description="Main Settings" selector="body">
-<Variable name="maincolor" description="Primary Color" type="color" default="#e8707c"  value="#e8707c"/>
+<Variable name="maincolor" description="Primary Color" type="color" default="#d75f16"  value="#d75f16"/>
 <Variable name="textcolor" description="Primary Text Color" type="color" default="#434343"  value="#434343"/>
 </Group>
 <Group description="Footer Background Settings" selector="body">
@@ -254,10 +253,10 @@ ul#nav1 {
 margin:0 auto;
 }
 .menu-wrap {
-margin:0 auto;
-position: relative;
-   border-top: 1px dashed $maincolor;
-	border-bottom: 1px dashed $maincolor;
+	margin:0 auto;
+	position: relative;
+	border-top: 1px dashed $textcolor;
+	border-bottom: 1px dashed $textcolor;
 }
 #menu ul > li {
 	position: relative;
@@ -270,7 +269,7 @@ position: relative;
 	color: $maincolor
 }
 #menu ul > li > a {
-		color: #000;
+	color: #000;
 	font-size: 16px;
 	line-height: 45px;
 	display: inline-block;
@@ -433,8 +432,6 @@ background: #ffffff;
 }
 .post-index-head {
 	text-align: center;
-background: url(http://1.bp.blogspot.com/-wjEoBtRDMpQ/UoWrzvsD1nI/AAAAAAAACSs/SmVg0r0SOl8/s320/headline-bottom-straight.png) no-repeat scroll 50% 100% transparent;
-	padding-bottom: 20px;
 }
 .inline-ad {
 	margin: 0;
@@ -501,7 +498,6 @@ transition: all .3s ease-out!important;
 .date-header-post a {
 	color: #bdbdbd;
 }
-
 .post-header {
 	padding: 10px;
 }
@@ -513,10 +509,10 @@ text-align:center;
 color: #888;
 }
 #meta-post a {
-  color: #888;
+	color: #888;
 }
-#meta-post .post-comment-link {
-
+.post-author.vcard a.g-profile {
+	text-transform: capitalize;
 }
 
 .index .post-labels, .archive .post-labels {
@@ -575,14 +571,14 @@ font-family:Bad Script;
 .resumo span {
 	display: block;
 	margin-bottom: 8px;
-font-size: 16px;
+	font-size: 16px;
 	line-height: 31px;
-text-align:center;
+	text-align: left;
 }
 .post-body img {
-max-width: 100%;
-position: relative;
-margin:10px auto;
+	max-width: 100%;
+	position: relative;
+	margin:10px auto;
 }
 .post h3 {
 font-size: 18px;
@@ -591,8 +587,8 @@ margin-bottom: 10px;
 line-height: 1.1;
 }
 .date-header-post .read-wrap {
-text-align:center;
-margin-bottom:10px;
+	text-align:left;
+	margin-bottom:10px;
 }
 .date-header-post .read-more {
 	padding: 13px 24px !important;
@@ -1567,10 +1563,10 @@ margin: 0;
 display: none;
 }
 .share-art, .share-box .post-author {
-float: none !important;
-margin: 0 auto;
-text-align: center;
-clear: both;
+	float: none !important;
+	margin: 0 auto;
+	text-align: center;
+	clear: both;
 }
 .read-more-wrap, .post-labels {
 float: none !important;
@@ -1858,43 +1854,43 @@ div.innerHTML = summary;
 <div style='clear: both;'/>
 <div class='tm-menu'>
 <div class='row menu-wrap'>
-		<b:section class='menu' id='menu' maxwidgets='1' name='Main Menu' showaddelement='yes'>
-		  <b:widget id='LinkList210' locked='true' title='Menu' type='LinkList' version='1'>
-			<b:widget-settings>
-			  <b:widget-setting name='text-8'>Download This Template</b:widget-setting>
-			  <b:widget-setting name='link-7'>http://www.soratemplates.com/p/seo-services.html</b:widget-setting>
-			  <b:widget-setting name='link-8'>http://www.soratemplates.com/2017/05/juliet-blogger-templates.html</b:widget-setting>
-			  <b:widget-setting name='link-5'>http://juliet-soratemplates.blogspot.com/soratemplates</b:widget-setting>
-			  <b:widget-setting name='link-6'>http://www.sorabloggingtips.com/2017/05/how-to-setup-juiet-blogger-template.html</b:widget-setting>
-			  <b:widget-setting name='link-3'>http://</b:widget-setting>
-			  <b:widget-setting name='link-4'>http://</b:widget-setting>
-			  <b:widget-setting name='text-1'>_SiteMap</b:widget-setting>
-			  <b:widget-setting name='text-0'>Features</b:widget-setting>
-			  <b:widget-setting name='text-3'>__Sub Menu 1</b:widget-setting>
-			  <b:widget-setting name='text-2'>_ShortCodes</b:widget-setting>
-			  <b:widget-setting name='text-5'>_Error Page</b:widget-setting>
-			  <b:widget-setting name='text-4'>__Sub Menu 2</b:widget-setting>
-			  <b:widget-setting name='text-7'>Seo Services</b:widget-setting>
-			  <b:widget-setting name='text-6'>Documentation</b:widget-setting>
-			  <b:widget-setting name='sorting'>NONE</b:widget-setting>
-			  <b:widget-setting name='link-1'>http://www.sorabloggingtips.com/2017/01/how-to-add-sitemap-widget-in-blogspot-blogs.html</b:widget-setting>
-			  <b:widget-setting name='link-2'>http://juliet-soratemplates.blogspot.in/p/page-markups-and-shortcodes.html</b:widget-setting>
-			  <b:widget-setting name='link-0'>#</b:widget-setting>
-			</b:widget-settings>
-			<b:includable id='main'>
-			<div class='widget-content'>
-			  <ul itemscope='' itemtype='http://schema.org/SiteNavigationElement'>
-				<li><a expr:href='data:blog.homepageUrl'>Home</a></li>
-				<b:loop values='data:links' var='link'>
-				  <li itemprop='name'><a expr:href='data:link.target' itemprop='url'><data:link.name/></a></li>
-				</b:loop>
-			  </ul>
-			</div>
-		  </b:includable>
-		  </b:widget>
-		</b:section>
+	<b:section class='menu' id='menu' maxwidgets='1' name='Main Menu' showaddelement='yes'>
+	  <b:widget id='LinkList210' locked='true' title='Menu' type='LinkList' version='1'>
+		<b:widget-settings>
+		  <b:widget-setting name='text-8'>Descargar</b:widget-setting>
+		  <b:widget-setting name='link-7'>#7</b:widget-setting>
+		  <b:widget-setting name='link-8'>#8</b:widget-setting>
+		  <b:widget-setting name='link-5'>#5</b:widget-setting>
+		  <b:widget-setting name='link-6'>#6</b:widget-setting>
+		  <b:widget-setting name='link-3'>#3</b:widget-setting>
+		  <b:widget-setting name='link-4'>#4</b:widget-setting>
+		  <b:widget-setting name='text-1'>_SiteMap</b:widget-setting>
+		  <b:widget-setting name='text-0'>Descacados</b:widget-setting>
+		  <b:widget-setting name='text-3'>__Sub Menu 1</b:widget-setting>
+		  <b:widget-setting name='text-2'>_Acceso Rápido</b:widget-setting>
+		  <b:widget-setting name='text-5'>_Pagina de Error</b:widget-setting>
+		  <b:widget-setting name='text-4'>__Sub Menu 2</b:widget-setting>
+		  <b:widget-setting name='text-7'>Contacto</b:widget-setting>
+		  <b:widget-setting name='text-6'>Documentación</b:widget-setting>
+		  <b:widget-setting name='sorting'>NONE</b:widget-setting>
+		  <b:widget-setting name='link-1'>#1</b:widget-setting>
+		  <b:widget-setting name='link-2'>#2</b:widget-setting>
+		  <b:widget-setting name='link-0'>#0</b:widget-setting>
+		</b:widget-settings>
+		<b:includable id='main'>
+		<div class='widget-content'>
+		  <ul itemscope='' itemtype='http://schema.org/SiteNavigationElement'>
+			<li><a expr:href='data:blog.homepageUrl'>Home</a></li>
+			<b:loop values='data:links' var='link'>
+			  <li itemprop='name'><a expr:href='data:link.target' itemprop='url'><data:link.name/></a></li>
+			</b:loop>
+		  </ul>
+		</div>
+	  </b:includable>
+	  </b:widget>
+	</b:section>
+</div>
   </div>
-	  </div>
 <div style='clear: both;'/>
   </div>
 
@@ -2506,22 +2502,20 @@ div.innerHTML = summary;
 		</h1></div>
 	</b:if>
 		<div class='post-meta'>
-<span class='post-author vcard'>
-
-		  <b>by</b>
-		  <a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'>
-				  <span itemprop='name'><data:post.author/></span></a>
-
-	  </span>
- <span class='post-timestamp'>
-		<b:if cond='data:top.showTimestamp'>
-		  <b>on</b>
-		<b:if cond='data:post.url'>
-		  <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
-		  <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published timeago' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
-		</b:if>
-		</b:if>
-	  </span>
+			<span class='post-author vcard'>
+				<data:top.authorLabel/>
+				<a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'>
+				<span itemprop='name'><data:post.author/></span></a>
+			</span>
+		<span class='post-timestamp'>
+			<b:if cond='data:top.showTimestamp'>
+				<data:top.timestampLabel/>
+				<b:if cond='data:post.url'>
+					<meta expr:content='data:post.canonicalUrl' itemprop='url'/>
+					<a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published timeago' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+				</b:if>
+			</b:if>
+		</span>
 		</div>
    </b:if>
   <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
@@ -2548,117 +2542,111 @@ div.innerHTML = summary;
 
 	<!-- Then use the post body as the schema.org description, for good G+/FB snippeting. -->
 	<article>
-		 <b:if cond='data:blog.pageType != &quot;item&quot;'>
-		 <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-		   <div class='post-index-head'>
-		  <b:if cond='data:post.title'>
-			  <font class='retitle'>
-				<h2 class='post-title entry-title'>
-				   <b:if cond='data:post.link'>
-					<a expr:href='data:post.link'>
-					   <data:post.title/>
-					  </a>
-					  <b:else/>
-					  <b:if cond='data:post.url'>
-					   <a expr:href='data:post.url'>
-					   <data:post.title/>
-					  </a>
-					  <b:else/>
-					 <data:post.title/>
-					 </b:if>
-				   </b:if>
-				  </h2>
-					</font>
-				</b:if>
-		   <div style='clear:both;'/>
- <div id='meta-post'>
+		<b:if cond='data:blog.pageType != &quot;item&quot;'>
+			<b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+				<div class='post-index-head'>
+					<b:if cond='data:post.title'>
+						<font class='retitle'>
+							<h2 class='post-title entry-title'>
+								<b:if cond='data:post.link'>
+									<a expr:href='data:post.link'>
+									<data:post.title/>
+									</a>
+								<b:else/>
+									<b:if cond='data:post.url'>
+										<a expr:href='data:post.url'>
+										<data:post.title/>
+										</a>
+									<b:else/>
+										<data:post.title/>
+									</b:if>
+								</b:if>
+							</h2>
+						</font>
+					</b:if>
+					<div style='clear:both;'/>
+
+					<!--
+					<div id='meta-post'>
 						<a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'>
-				  <span itemprop='name'><data:post.author/></span></a> <i aria-hidden='true' class='fa fa-circle' style='font-size: 8px;margin: 0 5px;'/>
-<abbr class='published timeago' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr>   <span class='post-comment-link'>
-						   <i aria-hidden='true' class='fa fa-circle' style='font-size: 8px;margin: 0 5px;'/>
-						   <b:if cond='data:post.allowComments'>
-			<a class='comment-bubble' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
-				<data:post.numComments/> Comments
-			</a>
-		</b:if>
-						  </span></div>
-		   </div>
-				  <div class='date-header-post'>
-					 <div class='resumo'>
-<span>
-<div expr:id='&quot;summary&quot; + data:post.id'><data:post.body/></div>
-<script type='text/javascript'>createSnippet(&quot;summary<data:post.id/>&quot;);</script>
-</span>
-</div>
-<div class='read-wrap'>
-<a class='read-more anchor-hover' expr:href='data:post.url'>Continue reading...</a>
+						<span itemprop='name'><data:post.author/></span></a> <i aria-hidden='true' class='fa fa-circle' style='font-size: 8px;margin: 0 5px;'/>
+						<abbr class='published timeago' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr>
+						<span class='post-comment-link'>
+							<i aria-hidden='true' class='fa fa-circle' style='font-size: 8px;margin: 0 5px;'/>
+							<b:if cond='data:post.allowComments'>
+								<a class='comment-bubble' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+									<data:post.numComments/> Comments
+								</a>
+							</b:if>
+						</span>
 					</div>
-					  <div style='clear: both;'/>
-  <span class='post-labels'>
-<span class='label-title'><i class='fa fa-tags'/></span>
-		<b:if cond='data:post.labels'>
-		 <b:loop index='x' values='data:post.labels' var='label'>
+					-->
 
-	<b:if cond='data:x==0'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
-  <b:if cond='data:x==1'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
+				</div>
+				<div class='date-header-post'>
+					<div class='resumo'>
+						<span>
+						<div expr:id='&quot;summary&quot; + data:post.id'><data:post.body/></div>
+						<script type='text/javascript'>createSnippet(&quot;summary<data:post.id/>&quot;);</script>
+						</span>
+					</div>
+					<div class='read-wrap'>
+						<a class='read-more anchor-hover' expr:href='data:post.url'>Sigue Leyendo...</a>
+					</div>
 
-  </b:loop>
-		</b:if>
-	   </span>
+					<div style='clear: both;'/>
 
-<div class='share-box share-post-span'>
-			   <div class='share-art'>
-<a class='fac-art' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-facebook'/><span class='resp_del'/></a>
+					<b:if cond='data:post.labels'>
+						<span class='post-labels'>
+							<span class='label-title'><i class='fa fa-tags'/></span>
+							<b:loop index='x' values='data:post.labels' var='label'>
 
-<a class='twi-art' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-twitter'/><span class='resp_del2'/></a>
+							<b:if cond='data:x==0'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
+							<b:if cond='data:x==1'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
 
-<a class='goo-art' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-google-plus'/><span class='resp_del3'/></a>
+							</b:loop>
+						</span>
+					</b:if>
 
-<a class='pin-art' expr:href='&quot;http://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.firstImageUrl + &quot;&amp;description=&quot; + data:post.snippet' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-pinterest'/><span class='resp_del4'/></a>
+					<div class='share-box share-post-span'>
+						<div class='share-art'>
+							<a class='fac-art' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-facebook'/><span class='resp_del'/></a>
 
-</div>
-
-</div>
-
-					  </div>
+							<a class='twi-art' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-twitter'/><span class='resp_del2'/></a>
+						</div>
+					</div>
+				</div>
 			<b:else/>
-	   <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
-		 <meta expr:content='data:post.snippet' name='twitter:description'/>
-		 <data:post.body/>
-	   </div>
-		  </b:if>
-		  <b:else/>
-	   <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
-		 <meta expr:content='data:post.snippet' name='twitter:description'/>
-		 <data:post.body/>
-	   </div>
-		 </b:if>
-	 </article>
+				<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+					<meta expr:content='data:post.snippet' name='twitter:description'/>
+					<data:post.body/>
+				</div>
+			</b:if>
+		<b:else/>
+			<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+				<meta expr:content='data:post.snippet' name='twitter:description'/>
+				<data:post.body/>
+			</div>
+		</b:if>
+	</article>
 
 	<b:if cond='data:post.hasJumpLink'>
-	  <div class='jump-link'>
-		<a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
-	  </div>
+		<div class='jump-link'>
+			<a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+		</div>
 	</b:if>
 
 	<div class='post-footer'>
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
 <div class='share-box'>
 
-		  <h8 class='share-title'>Share This:</h8>
-			   <div class='share-art'>
-<a class='fac-art' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-facebook'/><span class='resp_del'> Facebook</span></a>
+	<h8 class='share-title'>Compartir en:</h8>
+	<div class='share-art'>
+		<a class='fac-art' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-facebook'/><span class='resp_del'> Facebook</span></a>
 
-<a class='twi-art' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-twitter'/><span class='resp_del2'> Twitter</span></a>
-
-<a class='goo-art' expr:href='&quot;https://plus.google.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-google-plus'/><span class='resp_del3'> Google+</span></a>
-
-<a class='pin-art' expr:href='&quot;http://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;media=&quot; + data:post.firstImageUrl + &quot;&amp;description=&quot; + data:post.snippet' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-pinterest'/><span class='resp_del4'> Pinterest</span></a>
-
-<a class='lin-art' expr:href='&quot;http://www.linkedin.com/shareArticle?url=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-linkedin-square'/><span class='resp_del5'> Linkedin</span></a>
-
+		<a class='twi-art' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-twitter'/><span class='resp_del2'> Twitter</span></a>
+	</div>
 </div>
-		 </div>
 <div style='clear:both'/>
 
 <div class='post-pager' id='post-pager'>
@@ -3209,20 +3197,20 @@ content: &quot;\f16d&quot;;
 content: &quot;\f0d2&quot;;
 }
 &lt;/style&gt;</b:widget-setting>
-	</b:widget-settings>
+</b:widget-settings>
 	<b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-	<h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-	<data:content/>
-  </div>
-<div class='clear'/>
- <!--b:include name='quickedit'/-->
-</b:includable>
-  </b:widget>
-  <b:widget id='PopularPosts1' locked='false' title='Popular' type='PopularPosts' version='1'>
+		<!-- only display title if it's non-empty -->
+		<b:if cond='data:title != &quot;&quot;'>
+		<h2 class='title'><data:title/></h2>
+		</b:if>
+		<div class='widget-content'>
+		<data:content/>
+		</div>
+		<div class='clear'/>
+		<!--b:include name='quickedit'/-->
+	</b:includable>
+</b:widget>
+<b:widget id='PopularPosts1' locked='false' title='Popular' type='PopularPosts' version='1'>
 	<b:widget-settings>
 	  <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
 	  <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -3230,45 +3218,45 @@ content: &quot;\f0d2&quot;;
 	  <b:widget-setting name='timeRange'>LAST_YEAR</b:widget-setting>
 	</b:widget-settings>
 	<b:includable id='main'>
-				<b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-				<div class='widget-content popular-posts'>
-				  <ul>
-					<b:loop values='data:posts' var='post'>
-					  <li>
-						<b:if cond='!data:showThumbnails'>
-						  <b:if cond='!data:showSnippets'>
-							<!-- (1) No snippet/thumbnail -->
-							<a expr:href='data:post.href'><data:post.title/></a>
-							<b:else/>
-							<!-- (2) Show only snippets -->
-							<div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-							<div class='item-snippet'><data:post.snippet/></div>
-						  </b:if>
-						  <b:else/>
-						  <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
-						  <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
-							<b:if cond='data:post.thumbnail'>
-							  <div class='item-thumbnail'>
-								<a expr:href='data:post.href'>
-								  <img border='0' expr:alt='data:post.title' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-								</a>
-							  </div>
-							</b:if>
-							<div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-							<b:if cond='data:showSnippets'>
-							  <div class='item-snippet'><data:post.snippet/></div>
-							</b:if>
+		<b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+		<div class='widget-content popular-posts'>
+			<ul>
+				<b:loop values='data:posts' var='post'>
+				  <li>
+					<b:if cond='!data:showThumbnails'>
+					  <b:if cond='!data:showSnippets'>
+						<!-- (1) No snippet/thumbnail -->
+						<a expr:href='data:post.href'><data:post.title/></a>
+						<b:else/>
+						<!-- (2) Show only snippets -->
+						<div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+						<div class='item-snippet'><data:post.snippet/></div>
+					  </b:if>
+					  <b:else/>
+					  <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+					  <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+						<b:if cond='data:post.thumbnail'>
+						  <div class='item-thumbnail'>
+							<a expr:href='data:post.href'>
+							  <img border='0' expr:alt='data:post.title' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
+							</a>
 						  </div>
-						  <div style='clear: both;'/>
 						</b:if>
-					  </li>
-					</b:loop>
-				  </ul>
-				  <!--b:include name='quickedit'/-->
-				</div>
-			  </b:includable>
-  </b:widget>
-  <b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='1'>
+						<div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+						<b:if cond='data:showSnippets'>
+						  <div class='item-snippet'><data:post.snippet/></div>
+						</b:if>
+					  </div>
+					  <div style='clear: both;'/>
+					</b:if>
+				  </li>
+				</b:loop>
+			</ul>
+			<!--b:include name='quickedit'/-->
+		</div>
+	</b:includable>
+</b:widget>
+<b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='1'>
 	<b:widget-settings>
 	  <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
 	  <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -3281,158 +3269,128 @@ content: &quot;\f0d2&quot;;
 	  <b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
 	</b:widget-settings>
 	<b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-	<h2><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-  <div id='ArchiveList'>
-  <div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
-	<b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
-	<b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
-	<b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
-  </div>
-  </div>
-  <!--b:include name='quickedit'/-->
-  </div>
-</b:includable>
+		<b:if cond='data:title != &quot;&quot;'>
+		<h2><data:title/></h2>
+		</b:if>
+		<div class='widget-content'>
+		<div id='ArchiveList'>
+		<div expr:id='data:widget.instanceId + &quot;_ArchiveList&quot;'>
+		<b:include cond='data:style == &quot;HIERARCHY&quot;' data='data' name='interval'/>
+		<b:include cond='data:style == &quot;FLAT&quot;' data='data' name='flat'/>
+		<b:include cond='data:style == &quot;MENU&quot;' data='data' name='menu'/>
+		</div>
+		</div>
+		<!--b:include name='quickedit'/-->
+		</div>
+	</b:includable>
 	<b:includable id='flat' var='data'>
-  <ul class='flat'>
-	<b:loop values='data:data' var='i'>
-	  <li class='archivedate'>
-		<a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
-	  </li>
-	</b:loop>
-  </ul>
-</b:includable>
+		<ul class='flat'>
+			<b:loop values='data:data' var='i'>
+			  <li class='archivedate'>
+				<a expr:href='data:i.url'><data:i.name/></a> (<data:i.post-count/>)
+			  </li>
+			</b:loop>
+		</ul>
+	</b:includable>
 	<b:includable id='interval' var='intervalData'>
-  <b:loop values='data:intervalData' var='interval'>
-	<ul class='hierarchy'>
-	  <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
-		<b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
-		<a class='post-count-link' expr:href='data:interval.url'>
-		  <data:interval.name/>
-		</a>
-		<span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
-		<b:include cond='data:interval.data' data='interval.data' name='interval'/>
-		<b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
-	  </li>
-	</ul>
-  </b:loop>
-</b:includable>
-	<b:includable id='menu' var='data'>
-  <select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
-	<option value=''><data:title/></option>
-	<b:loop values='data:data' var='i'>
-	  <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
-	</b:loop>
-  </select>
-</b:includable>
-	<b:includable id='posts' var='posts'>
-  <ul class='posts'>
-	<b:loop values='data:posts' var='post'>
-	  <li><a expr:href='data:post.url'><data:post.title/></a></li>
-	</b:loop>
-  </ul>
-</b:includable>
-	<b:includable id='toggle' var='interval'>
-  <a class='toggle' href='javascript:void(0)'>
-	<span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
-	  <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
-		&#9660;&#160;
-	  <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
-		&#9668;&#160;
-	  <b:else/>
-		&#9658;&#160;
-	  </b:if>
-	</span>
-  </a>
-</b:includable>
-  </b:widget>
-  <b:widget id='Label1' locked='false' title='Labels' type='Label' version='1'>
-	<b:widget-settings>
-	  <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-	  <b:widget-setting name='display'>LIST</b:widget-setting>
-	  <b:widget-setting name='selectedLabelsList'/>
-	  <b:widget-setting name='showType'>ALL</b:widget-setting>
-	  <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
-	</b:widget-settings>
-	<b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-	<h2><data:title/></h2>
-  </b:if>
-  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
-	<b:if cond='data:display == &quot;list&quot;'>
-	  <ul>
-		<b:loop values='data:labels' var='label'>
-		  <li>
-			<b:if cond='data:blog.url == data:label.url'>
-			  <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-			<b:else/>
-			  <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-			</b:if>
-			<b:if cond='data:showFreqNumbers'>
-			  <span dir='ltr'>(<data:label.count/>)</span>
-			</b:if>
-		  </li>
+		<b:loop values='data:intervalData' var='interval'>
+			<ul class='hierarchy'>
+			  <li expr:class='&quot;archivedate &quot; + data:interval.expclass'>
+				<b:include cond='data:interval.toggleId' data='interval' name='toggle'/>
+				<a class='post-count-link' expr:href='data:interval.url'>
+				  <data:interval.name/>
+				</a>
+				<span class='post-count' dir='ltr'>(<data:interval.post-count/>)</span>
+				<b:include cond='data:interval.data' data='interval.data' name='interval'/>
+				<b:include cond='data:interval.posts' data='interval.posts' name='posts'/>
+			  </li>
+			</ul>
 		</b:loop>
-	  </ul>
-	<b:else/>
-	  <b:loop values='data:labels' var='label'>
-		<span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
-		  <b:if cond='data:blog.url == data:label.url'>
-			<span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-		  <b:else/>
-			<a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-		  </b:if>
-		  <b:if cond='data:showFreqNumbers'>
-			<span class='label-count' dir='ltr'>(<data:label.count/>)</span>
-		  </b:if>
-		</span>
-	  </b:loop>
-	</b:if>
-	<!--b:include name='quickedit'/-->
-  </div>
-</b:includable>
-  </b:widget>
+	</b:includable>
+	<b:includable id='menu' var='data'>
+		<select expr:id='data:widget.instanceId + &quot;_ArchiveMenu&quot;'>
+		<option value=''><data:title/></option>
+		<b:loop values='data:data' var='i'>
+		  <option expr:value='data:i.url'><data:i.name/> (<data:i.post-count/>)</option>
+		</b:loop>
+		</select>
+	</b:includable>
+	<b:includable id='posts' var='posts'>
+		<ul class='posts'>
+			<b:loop values='data:posts' var='post'>
+			  <li><a expr:href='data:post.url'><data:post.title/></a></li>
+			</b:loop>
+		</ul>
+	</b:includable>
+	<b:includable id='toggle' var='interval'>
+		<a class='toggle' href='javascript:void(0)'>
+			<span expr:class='&quot;zippy&quot; + (data:interval.expclass == &quot;expanded&quot; ? &quot; toggle-open&quot; : &quot;&quot;)'>
+			  <b:if cond='data:interval.expclass == &quot;expanded&quot;'>
+				&#9660;&#160;
+			  <b:elseif cond='data:blog.languageDirection == &quot;rtl&quot;'/>
+				&#9668;&#160;
+			  <b:else/>
+				&#9658;&#160;
+			  </b:if>
+			</span>
+		</a>
+	</b:includable>
+</b:widget>
+
+<b:widget id='Label1' locked='false' title='Labels' type='Label' version='1'>
+	<b:widget-settings>
+		<b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+		<b:widget-setting name='display'>LIST</b:widget-setting>
+		<b:widget-setting name='selectedLabelsList'/>
+		<b:widget-setting name='showType'>ALL</b:widget-setting>
+		<b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+	</b:widget-settings>
+
+	<b:includable id='main'>
+		<b:if cond='data:title != &quot;&quot;'>
+			<h2><data:title/></h2>
+		</b:if>
+
+		<div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+			<b:if cond='data:display == &quot;list&quot;'>
+			  <ul>
+				<b:loop values='data:labels' var='label'>
+				  <li>
+					<b:if cond='data:blog.url == data:label.url'>
+					  <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+					<b:else/>
+					  <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+					</b:if>
+					<b:if cond='data:showFreqNumbers'>
+					  <span dir='ltr'>(<data:label.count/>)</span>
+					</b:if>
+				  </li>
+				</b:loop>
+			  </ul>
+			<b:else/>
+			  <b:loop values='data:labels' var='label'>
+				<span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+				  <b:if cond='data:blog.url == data:label.url'>
+					<span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+				  <b:else/>
+					<a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+				  </b:if>
+				  <b:if cond='data:showFreqNumbers'>
+					<span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+				  </b:if>
+				</span>
+			  </b:loop>
+			</b:if>
+			<!--b:include name='quickedit'/-->
+		</div>
+	</b:includable>
+</b:widget>
+
 </b:section>
 	</div>
- <div style='clear: both;'/>
-	</div>
-	<!-- end content-wrapper -->
-<div class='insta-wrap'>
- <b:section class='featureinsta row' id='Instagram Widget' maxwidget='1' showaddelement='yes'>
-   <b:widget id='HTML208' locked='false' title='Follow Us @soratemplates' type='HTML' version='1'>
-	 <b:widget-settings>
-	   <b:widget-setting name='content'>&lt;div id=&#39;instafeed&#39;/&gt;
-&lt;script type=&#39;text/javascript&#39;&gt;//&lt;![CDATA[
-var feed = new Instafeed({
- get: &#39;user&#39;,
- userId: 4578212267,
-  limit:6,
-  sortBy:&#39;random&#39;,
-accessToken: &#39;4578212267.1677ed0.1c160e2835fd4d33888b0175d44bdf9d&#39;,
-template: &#39;&lt;li&gt;&lt;a href=&quot;{{link}}&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;{{image}}&quot; /&gt;&lt;div class=&quot;insta-likes&quot;&gt;&lt;div style=&quot;display: table; vertical-align: middle; height: 100%; width: 100%;&quot;&gt;&lt;span style=&quot;display: table-cell; vertical-align: middle; height: 100%; width: 100%;&quot;&gt;{{likes}} &lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;br/&gt;{{comments}} &lt;i class=&quot;fa fa-comment&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/li&gt;&#39;,
- resolution: &#39;standard_resolution&#39;
- });
- feed.run();
-//]]&gt;
-&lt;/script&gt;&lt;/div&gt;</b:widget-setting>
-	 </b:widget-settings>
-	 <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-	<h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-	<data:content/>
-  </div>
-
-  <!--b:include name='quickedit'/-->
-</b:includable>
-   </b:widget>
- </b:section>
+	<div style='clear: both;'/>
 </div>
-<div style='clear: both;'/>
+	<!-- end content-wrapper -->
 <div style='clear: both;'/>
 <div id='jugas_footer'>
 	<div class='copy-container row'>
