@@ -565,9 +565,6 @@ font-family:Bad Script;
 .label-head a {
 	padding-left: 2px;
 }
-.resumo {
-	color: #919191;
-}
 .resumo span {
 	display: block;
 	margin-bottom: 8px;
@@ -595,36 +592,37 @@ line-height: 1.1;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 10px 0 0;
-	font-size: 20px;
+	font-size: 17px;
 	border-radius: 0px;
 	color: $textcolor;
-	font-weight: bold;
-	font-family: Bad Script;
+	font-weight: normal;
+	border:1px solid;
 }
 .read-more:hover {
 	color:$maincolor;
+	cursor: pointer;
 }
 .share-post-span {
 	display: inline-block;
 	padding: 5px 0px 5px;
 	text-transform: uppercase;
 	position: relative;
-float:right;
+	float:right;
 }
 .share-post-span .share-art {
 	display: inline-block;
-padding: 0;
-padding-top: 0;
-font-size: 14px;
-font-weight: 400;
-text-transform: capitalize;
+	padding: 0;
+	padding-top: 0;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: capitalize;
 }
 .share-post-span .share-art a {
-padding: 3px 8px;
-margin-left: 4px;
-border-radius: 2px;
-display: inline-block;
-margin-right: 0;
+	padding: 3px 8px;
+	margin-left: 4px;
+	border-radius: 2px;
+	display: inline-block;
+	margin-right: 0;
 }
 .share-post-span .share-art .fac-art{color:#3b5998}
 .share-post-span .share-art .fac-art:hover{color:rgba(49,77,145,0.7)}
