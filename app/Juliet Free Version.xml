@@ -2470,55 +2470,57 @@ div.innerHTML = summary;
 	  <meta expr:content='data:post.firstImageUrl' itemprop='image'/>
 	</b:if>
 	<div class='post-header'>
- <b:if cond='data:blog.pageType == &quot;item&quot;'>
-<span class='label-head'>
-	<span class='label-title'><i class='fa fa-tags'/></span>
+	<b:if cond='data:blog.pageType == &quot;item&quot;'>
+
 		<b:if cond='data:post.labels'>
-		 <b:loop index='x' values='data:post.labels' var='label'>
-
-	<b:if cond='data:x==0'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
-  <b:if cond='data:x==1'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
-
-  </b:loop>
+			<span class='label-head'>
+				<span class='label-title'><i class='fa fa-tags'/></span>
+				<b:loop index='x' values='data:post.labels' var='label'>
+					<b:if cond='data:x==0'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
+					<b:if cond='data:x==1'> <a expr:href='data:label.url + &quot;?max-results=5&quot;' rel='tag nofollow'># <data:label.name/></a></b:if>
+				</b:loop>
+			</span>
 		</b:if>
 
-	  </span>
 		<b:if cond='data:post.title'>
-	  <div class='post-head'>
-<h1 class='post-title entry-title' itemprop='name headline'>
-	  <b:if cond='data:post.link'>
-		<a expr:href='data:post.link'><data:post.title/></a>
-	  <b:else/>
-		<b:if cond='data:post.url'>
-		  <b:if cond='data:blog.url != data:post.url'>
-			<a expr:href='data:post.url'><data:post.title/></a>
-		  <b:else/>
-			<data:post.title/>
-		  </b:if>
-		<b:else/>
-		  <data:post.title/>
+			<div class='post-head'>
+				<h1 class='post-title entry-title' itemprop='name headline'>
+					<b:if cond='data:post.link'>
+						<a expr:href='data:post.link'><data:post.title/></a>
+					<b:else/>
+						<b:if cond='data:post.url'>
+							<b:if cond='data:blog.url != data:post.url'>
+							<a expr:href='data:post.url'><data:post.title/></a>
+							<b:else/>
+							<data:post.title/>
+							</b:if>
+						<b:else/>
+							<data:post.title/>
+						</b:if>
+					</b:if>
+				</h1>
+			</div>
 		</b:if>
-	  </b:if>
-		</h1></div>
-	</b:if>
+
 		<div class='post-meta'>
 			<span class='post-author vcard'>
 				<data:top.authorLabel/>
 				<a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'>
 				<span itemprop='name'><data:post.author/></span></a>
 			</span>
-		<span class='post-timestamp'>
-			<b:if cond='data:top.showTimestamp'>
-				<data:top.timestampLabel/>
-				<b:if cond='data:post.url'>
-					<meta expr:content='data:post.canonicalUrl' itemprop='url'/>
-					<a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published timeago' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+			<span class='post-timestamp'>
+				<b:if cond='data:top.showTimestamp'>
+					<data:top.timestampLabel/>
+					<b:if cond='data:post.url'>
+						<meta expr:content='data:post.canonicalUrl' itemprop='url'/>
+						<a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published timeago' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+					</b:if>
 				</b:if>
-			</b:if>
-		</span>
+			</span>
 		</div>
-   </b:if>
-  <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+	</b:if>
+
+	<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
 	<b:if cond='data:post.title'>
 	  <div class='post-head'><h1 class='post-title entry-title' itemprop='name'>
 	  <b:if cond='data:post.link'>
@@ -2538,7 +2540,7 @@ div.innerHTML = summary;
 	</b:if>
 	</b:if>
 
-	</div>
+</div>
 
 	<!-- Then use the post body as the schema.org description, for good G+/FB snippeting. -->
 	<article>
