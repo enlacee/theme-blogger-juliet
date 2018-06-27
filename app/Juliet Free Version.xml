@@ -4,6 +4,50 @@
   <head>
 	<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
 	<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'/>
+
+	<!-- Include required JS files -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+	<!--
+	    At least one brush, here we choose JS. You need to include a brush for every
+	    language you want to highlight
+	-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+	<script type='text/javascript'>
+		(function(){
+			var corecss = document.createElement('link');
+			var themecss = document.createElement('link');
+			var corecssurl = "https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css";
+			if ( corecss.setAttribute ) {
+					corecss.setAttribute( "rel", "stylesheet" );
+					corecss.setAttribute( "type", "text/css" );
+					corecss.setAttribute( "href", corecssurl );
+			} else {
+					corecss.rel = "stylesheet";
+					corecss.href = corecssurl;
+			}
+			document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+			var themecssurl = "https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css";
+			if ( themecss.setAttribute ) {
+					themecss.setAttribute( "rel", "stylesheet" );
+					themecss.setAttribute( "type", "text/css" );
+					themecss.setAttribute( "href", themecssurl );
+			} else {
+					themecss.rel = "stylesheet";
+					themecss.href = themecssurl;
+			}
+			//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+			document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+		})();
+		SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+		SyntaxHighlighter.config.strings.help = '?';
+		SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+		SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+		SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+		SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+		SyntaxHighlighter.defaults['toolbar'] = false;
+		SyntaxHighlighter.all();
+	</script>
+
 	<b:include data='blog' name='all-head-content'/>
 	<title>
 		<b:if cond='data:blog.pageType == &quot;index&quot;'>
