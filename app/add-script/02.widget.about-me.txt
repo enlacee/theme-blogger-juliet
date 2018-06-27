@@ -1,0 +1,13 @@
+<div class="about-widget-image">
+	<img src="https://2.bp.blogspot.com/-u5orqsKiMYM/V6xh6r77tsI/AAAAAAAAArM/X7L7eSMG_EwotXqLdZgAKtZEGyPjFIRVQCLcB/s1600/looks006-690x455-1442922083.jpg" alt="About Me" original="https://2.bp.blogspot.com/-u5orqsKiMYM/V6xh6r77tsI/AAAAAAAAArM/X7L7eSMG_EwotXqLdZgAKtZEGyPjFIRVQCLcB/s1600/looks006-690x455-1442922083.jpg" />
+</div>
+<div style="text-align: justify">Munere veritus fierent cu sed, congue altera mea te, ex clita eripuit evertitur duo. Legendos tractatos honestatis ad mel. Legendos tractatos honestatis ad mel.
+, <a href="#" style="
+	text-decoration: underline;
+">click here →</a></div>
+<style>
+.about-widget-image {
+	max-height: 260px;
+	overflow:hidden;
+	margin-bottom: 15px;
+}</style>
