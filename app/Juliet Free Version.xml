@@ -1811,7 +1811,7 @@ div.innerHTML = summary;
 		 <b:widget-setting name='showDateHeader'>true</b:widget-setting>
 		 <b:widget-setting name='style.textcolor'>#0080ce</b:widget-setting>
 		 <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-		 <b:widget-setting name='authorLabel'>By</b:widget-setting>
+		 <b:widget-setting name='authorLabel'>Por</b:widget-setting>
 		 <b:widget-setting name='showCommentLink'>true</b:widget-setting>
 		 <b:widget-setting name='style.urlcolor'>#434343</b:widget-setting>
 		 <b:widget-setting name='showAuthor'>false</b:widget-setting>
@@ -2412,14 +2412,16 @@ div.innerHTML = summary;
 		</b:if>
 
 		<div class='post-meta'>
+
 			<span class='post-author vcard'>
 				<data:top.authorLabel/>
 				<a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'>
 				<span itemprop='name'><data:post.author/></span></a>
 			</span>
+
 			<span class='post-timestamp'>
 				<b:if cond='data:top.showTimestamp'>
-					<data:top.timestampLabel/>
+					<!-- <data:top.timestampLabel/> -->
 					<b:if cond='data:post.url'>
 						<meta expr:content='data:post.canonicalUrl' itemprop='url'/>
 						<a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published timeago' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
