@@ -1702,7 +1702,7 @@ div.innerHTML = summary;
 	  This results in a margin-width's worth of pixels being cropped. If the
 	  user is not using shrink to fit then we expand the header.
 	  -->
-	  <b:if cond='data:mobile'>
+	<b:if cond='data:mobile'>
 		<div id='header-inner'>
 		  <div class='titlewrapper' style='background: transparent'>
 			<h1 class='title' style='background: transparent; border-width: 0px'>
@@ -1711,16 +1711,17 @@ div.innerHTML = summary;
 		  </div>
 		  <b:include name='description'/>
 		</div>
-	  <b:else/>
+	<b:else/>
 		<div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
-		  <div class='titlewrapper' style='background: transparent'>
-			<h1 class='title' style='background: transparent; border-width: 0px'>
-			  <b:include name='title'/>
-			</h1>
-		  </div>
-		  <b:include name='description'/>
+			<div class='titlewrapper' style='background: transparent'>
+				<h1 class='title' style='background: transparent; border-width: 0px'>
+					<b:include name='title'/>
+				</h1>
+			</div>
+			<b:include name='description'/>
 		</div>
-	  </b:if>
+	</b:if>
+	
 	<b:else/>
 	  <!--Show the image only-->
 	  <div id='header-inner'>
