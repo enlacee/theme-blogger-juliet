@@ -2253,16 +2253,16 @@ div.innerHTML = summary;
 </b:if>
 					</b:if>
 
-		  <div class='post-header'>
+		<div class='post-header'>
 			<div class='post-header-line-1'/>
-		  </div>
+		</div>
 
-		  <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+		<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
 			<data:post.body/>
 			<div style='clear: both;'/> <!-- clear for photos floats -->
-		  </div>
+		</div>
 
-		  <div class='post-footer'>
+		<div class='post-footer'>
 			<div class='post-footer-line post-footer-line-1'>
 			  <span class='post-author vcard'>
 				<b:if cond='data:top.showAuthor'>
@@ -2307,7 +2307,7 @@ div.innerHTML = summary;
 			  </b:if>
 			</div>
 
-		  </div>
+		</div>
 		</div>
 
 		<b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
