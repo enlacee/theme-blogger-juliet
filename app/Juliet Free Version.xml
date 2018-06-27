@@ -132,14 +132,14 @@ background-color: #faebbc;
 border-top: 1px solid #e1cc89;
 border-bottom: 1px solid #e1cc89;
 margin: 5px;
-background-image: url(http://1.bp.blogspot.com/-siy6EKYCLtM/U6X4AdKrr0I/AAAAAAAANDs/HCjRvuedDro/s1600/openquote1.gif);
+background-image: url(https://1.bp.blogspot.com/-siy6EKYCLtM/U6X4AdKrr0I/AAAAAAAANDs/HCjRvuedDro/s1600/openquote1.gif);
 background-position: top left;
 background-repeat: no-repeat;
 text-indent: 23px;
 }
 blockquote p{
 display: block;
-background-image: url(http://3.bp.blogspot.com/-UjppXQI-ww0/U6X4IpheNiI/AAAAAAAAND0/PJhRvvhAWGU/s1600/closequote1.gif);
+background-image: url(https://3.bp.blogspot.com/-UjppXQI-ww0/U6X4IpheNiI/AAAAAAAAND0/PJhRvvhAWGU/s1600/closequote1.gif);
 background-repeat: no-repeat;
 background-position: bottom right;
 }
@@ -207,15 +207,14 @@ text-align: center;
 display: inline-block;
 }
 #header h1 {
-	color: $maincolor;
 	margin: 0;
-	font-size: 77px;
+	font-size: 4.5em;
 	line-height: 1.4em;
 	text-transform: capitalize;
 	font-weight: 700;
 	font-style: italic;
 	letter-spacing: 0px;
-	text-shadow: 5px 5px 0 rgba(206, 0, 0, 0.11);
+	text-shadow: 3px 3px 1px rgba(150, 150, 150, 0.43);
 }
 #header .description {
    letter-spacing: 1px;
@@ -229,7 +228,7 @@ display: inline-block;
 }
 /* ######## Navigation Menu Css ######################### */
 .selectnav {
-display:none;
+	display:none;
 }
 .tm-menu {
 	font-weight: 400;
@@ -1284,8 +1283,8 @@ margin: 5px 0;
 
 .selectnav {
 	display: inline-block;
-width: 100%;
-max-width:200px;
+	width: 100%;
+	max-width:200px;
 }
 .tm-menu, #menu {
 	height: auto;
@@ -1363,8 +1362,8 @@ display: none;
 	display: none;
 }
 .selectnav {
-margin: 0 auto;
-display: block;
+	margin: 0 auto;
+	display: block;
 }
 .foot-menu .selectnav {
 	display: inline-block;
