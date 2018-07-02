@@ -1208,9 +1208,6 @@ font-family: 'Roboto Condensed', sans-serif;
 color: $maincolor;
 font-size: 12px;
 font-weight: 700;
-position: absolute;
-top: 9px;
-right: 0
 }
 .PopularPosts .item-thumbnail{margin:0 15px 0 0 !important;width:90px;height:65px;float:left;overflow:hidden;    position: relative}
 .PopularPosts .item-thumbnail a{position:relative;display:block;overflow:hidden;line-height:0}
