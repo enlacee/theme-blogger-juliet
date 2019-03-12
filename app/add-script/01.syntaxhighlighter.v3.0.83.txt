@@ -26,6 +26,9 @@
 	    language you want to highlight
 	-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+	<!-- soporta lenguaje BASH -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushBash.min.js"></script>
+
 	<script type='text/javascript'>
 		(function(){
 			var corecss = document.createElement('link');

@@ -12,6 +12,7 @@
 	    language you want to highlight
 	-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushBash.min.js"></script>
 	<script type='text/javascript'>
 		(function(){
 			var corecss = document.createElement('link');
@@ -262,8 +263,8 @@ display: inline-block;
 	text-shadow: 3px 3px 1px rgba(150, 150, 150, 0.43);
 }
 #header .description {
-   letter-spacing: 1px;
-	text-transform: lowercase;
+	letter-spacing: 1px;
+	text-transform: none;
 	font-family: 'Bad Script', cursive;
 	font-size: 18px;
 	font-weight: 400;
@@ -473,7 +474,7 @@ background: #ffffff;
  border-bottom: 2px solid #e2e2e2;
 }
 .post-index-head {
-	text-align: center;
+	text-align: left;
 }
 .inline-ad {
 	margin: 0;
@@ -542,11 +543,11 @@ transition: all .3s ease-out!important;
 	padding: 10px;
 }
 .item .post-header {
-text-align:center;
+	text-align:left;
 }
 #meta-post {
 	letter-spacing: 1px;
-color: #888;
+	color: #888;
 }
 #meta-post a {
 	color: #888;
@@ -1822,8 +1823,7 @@ div.innerHTML = summary;
 					<b:widget-setting name='text-2'>_Acceso Rápido</b:widget-setting>
 					<b:widget-setting name='text-5'>_Pagina de Error</b:widget-setting>
 					<b:widget-setting name='text-4'>__Sub Menu 2</b:widget-setting>
-					<b:widget-setting name='text-7'>Contacto</b:widget-setting>
-					<b:widget-setting name='text-6'>Documentación</b:widget-setting>
+					<b:widget-setting name='text-6'>Contacto</b:widget-setting>
 					<b:widget-setting name='sorting'>NONE</b:widget-setting>
 					<b:widget-setting name='link-1'>#1</b:widget-setting>
 					<b:widget-setting name='link-2'>#2</b:widget-setting>
@@ -1832,7 +1832,7 @@ div.innerHTML = summary;
 				<b:includable id='main'>
 				<div class='widget-content'>
 					<ul itemscope='' itemtype='http://schema.org/SiteNavigationElement'>
-					<li><a expr:href='data:blog.homepageUrl'>Home</a></li>
+					<li><a expr:href='data:blog.homepageUrl'>Inicio</a></li>
 					<b:loop values='data:links' var='link'>
 						<li itemprop='name'><a expr:href='data:link.target' itemprop='url'><data:link.name/></a></li>
 					</b:loop>
@@ -2380,19 +2380,22 @@ div.innerHTML = summary;
 				<div class='post hentry'>
 					<b:if cond='data:blog.pageType == &quot;index&quot;'>
 						<b:if cond='data:post.thumbnailUrl'>
-						<div class='block-image'><div class='thumb'>
-					   &lt;a class=&#39;post-thumb&#39; href=&#39;<data:post.url/>&#39; style=&#39;background:url(<data:post.thumbnailUrl/>) no-repeat center center;background-size:cover&#39;&gt;&lt;/a&gt;
-						</div></div>
+							<div class='block-image'>
+								<div class='thumb'>
+						   &lt;a class=&#39;post-thumb&#39; href=&#39;<data:post.url/>&#39; style=&#39;background:url(<data:post.thumbnailUrl/>) no-repeat center center;background-size:cover&#39;&gt;&lt;/a&gt;
+								</div>
+							</div>
 						<b:else/>
-						<b:if cond='data:post.firstImageUrl'>
-						<div class='block-image'><div class='thumb'>
-						  &lt;a class=&#39;post-thumb&#39; href=&#39;<data:post.url/>&#39; style=&#39;background:url(<data:post.firstImageUrl/>) no-repeat center center;background-size:cover&#39;&gt;&lt;/a&gt;
-						</div></div>
-						<b:else/>
-						<div class='block-image'><div class='thumb'>
-					   &lt;a class=&#39;post-thumb&#39; href=&#39;<data:post.url/>&#39; style=&#39;background:url(https://2.bp.blogspot.com/-IO-XEI1LgEs/VmPNKFp0BhI/AAAAAAAACOg/_JrYHMBXV5w/s1600-r/nothumb.jpg) no-repeat center center;background-size:cover&#39;&gt;&lt;/a&gt;
-						</div></div>
-					 </b:if></b:if>
+							<b:if cond='data:post.firstImageUrl'>
+								<div class='block-image'>
+									<div class='thumb'>
+								  &lt;a class=&#39;post-thumb&#39; href=&#39;<data:post.url/>&#39; style=&#39;background:url(<data:post.firstImageUrl/>) no-repeat center center;background-size:cover&#39;&gt;&lt;/a&gt;
+									</div>
+								</div>
+							<b:else/>
+								<!-- remove default image -->
+							</b:if>
+						</b:if>
 					</b:if>
 					<b:if cond='data:blog.pageType == &quot;archive&quot;'>
 						<b:if cond='data:post.thumbnailUrl'>
@@ -2554,14 +2557,6 @@ div.innerHTML = summary;
 											</b:loop>
 										</span>
 									</b:if>
-
-									<div class='share-box share-post-span'>
-										<div class='share-art'>
-											<a class='fac-art' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;title=&quot;+ data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-facebook'/><span class='resp_del'/></a>
-
-											<a class='twi-art' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' onclick='window.open(this.href, &apos;windowName&apos;, &apos;width=600, height=400, left=24, top=24, scrollbars, resizable&apos;); return false;' rel='nofollow' target='_blank'><i class='fa fa-twitter'/><span class='resp_del2'/></a>
-										</div>
-									</div>
 								</div>
 							<b:else/>
 								<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
@@ -3059,15 +3054,15 @@ div.innerHTML = summary;
 
 <div id='sidebar-wrapper'>
 	<b:section class='sidebar' id='sidebar' preferred='yes'>
-		<b:widget id='HTML1' locked='false' title='About Me' type='HTML' version='1'>
+		<b:widget id='HTML1' locked='false' title='Destacado' type='HTML' version='1'>
 		<b:widget-settings>
 			<b:widget-setting name='content'>&lt;div class=&quot;about-widget-image&quot;&gt;
-		&lt;img src=&quot;https://2.bp.blogspot.com/-u5orqsKiMYM/V6xh6r77tsI/AAAAAAAAArM/X7L7eSMG_EwotXqLdZgAKtZEGyPjFIRVQCLcB/s1600/looks006-690x455-1442922083.jpg&quot; alt=&quot;About Me&quot; original=&quot;https://2.bp.blogspot.com/-u5orqsKiMYM/V6xh6r77tsI/AAAAAAAAArM/X7L7eSMG_EwotXqLdZgAKtZEGyPjFIRVQCLcB/s1600/looks006-690x455-1442922083.jpg&quot; /&gt;
+		&lt;img src=&quot;https://3.bp.blogspot.com/-PoLUbq_TzIo/XIXiW6wICqI/AAAAAAAAABU/ZZ9sQAz8_yUOxwTwDjhRs6rXRMCmfGtoACPcBGAYYCw/s1600/github.png&quot; alt=&quot;Destacado&quot; original=&quot;https://3.bp.blogspot.com/-PoLUbq_TzIo/XIXiW6wICqI/AAAAAAAAABU/ZZ9sQAz8_yUOxwTwDjhRs6rXRMCmfGtoACPcBGAYYCw/s1600/github.png&quot; /&gt;
 				&lt;/div&gt;
-&lt;div style=&quot;text-align: justify&quot;&gt;Munere veritus fierent cu sed, congue altera mea te, ex clita eripuit evertitur duo. Legendos tractatos honestatis ad mel. Legendos tractatos honestatis ad mel.
-, &lt;a href=&quot;#&quot; style=&quot;
+&lt;div style=&quot;text-align: justify&quot;&gt;Conoce más acerca de mi y los OpenSource realizados a lo largo de mi carrera como Ing de Sistemas. Revísalo en GitHub
+, &lt;a href=&quot;https://github.com/enlacee?tab=repositories&quot; style=&quot;
 	text-decoration: underline;
-&quot;&gt;ver mas &#8594;&lt;/a&gt;&lt;/div&gt;
+&quot;&gt;ver más &#8594;&lt;/a&gt;&lt;/div&gt;
 
 &lt;style&gt;
 .about-widget-image {
@@ -3089,125 +3084,7 @@ margin-bottom: 15px;
 		</b:includable>
 		</b:widget>
 
-		<b:widget id='HTML2' locked='false' title='Social' type='HTML' version='1'>
-			<b:widget-settings>
-				<b:widget-setting name='content'>&lt;div class=&quot;icons-social&quot;&gt;
-&lt;ul id=&quot;social&quot;&gt;
-&lt;li&gt;&lt;a class=&quot;facebook&quot; href=&quot;#&quot; title=&quot;facebook&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&quot;twitter&quot; href=&quot;#&quot; title=&quot;twitter&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&quot;gplus&quot; href=&quot;#&quot; title=&quot;gplus&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&quot;linkedin&quot; href=&quot;#&quot; title=&quot;linkedin&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&quot;instagram&quot; href=&quot;#&quot; title=&quot;instagram&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&quot;pinterest&quot; href=&quot;#&quot; title=&quot;pinterest&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;
-&lt;style&gt;.icons-social li {
-display: inline-block;
-padding: 0;
-}
-.icons-social ul {
-	display: inline-block;
-}
-.icons-social {
-	text-align: center;
-}
-.icons-social #social a {
-display: block;
-	margin-right: 15px;
-	color: #333;
-	text-align: center;
-	font-size: 20px;
-}
-.icons-social #social a:before {
-display: inline-block;
-font: normal normal normal 22px/1 FontAwesome;
-font-size: inherit;
-font-style: normal;
-font-weight: 400;
-line-height: 42px;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-.icons-social .facebook:before {
-content: &quot;\f09a&quot;;
-}
-.icons-social .twitter:before {
-content: &quot;\f099&quot;;
-}
-.icons-social .gplus:before {
-content: &quot;\f0d5&quot;;
-}
-.icons-social .linkedin:before {
-content: &quot;\f0e1&quot;;
-}
-.icons-social .instagram:before {
-content: &quot;\f16d&quot;;
-}
-.icons-social .pinterest:before {
-content: &quot;\f0d2&quot;;
-}
-&lt;/style&gt;</b:widget-setting>
-	</b:widget-settings>
-
-	<b:includable id='main'>
-		<!-- only display title if it's non-empty -->
-		<b:if cond='data:title != &quot;&quot;'>
-		<h2 class='title'><data:title/></h2>
-		</b:if>
-		<div class='widget-content'>
-		<data:content/>
-		</div>
-		<div class='clear'/>
-		<!--b:include name='quickedit'/-->
-	</b:includable>
-</b:widget>
-<b:widget id='PopularPosts1' locked='false' title='Popular' type='PopularPosts' version='1'>
-	<b:widget-settings>
-		<b:widget-setting name='numItemsToShow'>3</b:widget-setting>
-		<b:widget-setting name='showThumbnails'>true</b:widget-setting>
-		<b:widget-setting name='showSnippets'>true</b:widget-setting>
-		<b:widget-setting name='timeRange'>LAST_YEAR</b:widget-setting>
-	</b:widget-settings>
-	<b:includable id='main'>
-		<b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-		<div class='widget-content popular-posts'>
-			<ul>
-				<b:loop values='data:posts' var='post'>
-					<li>
-					<b:if cond='!data:showThumbnails'>
-						<b:if cond='!data:showSnippets'>
-						<!-- (1) No snippet/thumbnail -->
-						<a expr:href='data:post.href'><data:post.title/></a>
-						<b:else/>
-						<!-- (2) Show only snippets -->
-						<div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-						<div class='item-snippet'><data:post.snippet/></div>
-						</b:if>
-						<b:else/>
-						<!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
-						<div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
-						<b:if cond='data:post.thumbnail'>
-							<div class='item-thumbnail'>
-							<a expr:href='data:post.href'>
-								<img border='0' expr:alt='data:post.title' expr:height='data:thumbnailSize' expr:src='data:post.thumbnail' expr:width='data:thumbnailSize'/>
-							</a>
-							</div>
-						</b:if>
-						<div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-						<b:if cond='data:showSnippets'>
-							<div class='item-snippet'><data:post.snippet/></div>
-						</b:if>
-						</div>
-						<div style='clear: both;'/>
-					</b:if>
-					</li>
-				</b:loop>
-			</ul>
-			<!--b:include name='quickedit'/-->
-		</div>
-	</b:includable>
-</b:widget>
-
-<b:widget id='Label1' locked='false' title='Labels' type='Label' version='1'>
+<b:widget id='Label1' locked='false' title='Etiquetas' type='Label' version='1'>
 	<b:widget-settings>
 		<b:widget-setting name='sorting'>ALPHA</b:widget-setting>
 		<b:widget-setting name='display'>LIST</b:widget-setting>
@@ -3334,21 +3211,6 @@ var POSTPAGER_NEWER = "Siguiente";
 var _0xcd06=["\x23\x70\x6F\x73\x74\x2D\x70\x61\x67\x65\x72\x20\x2E\x62\x6C\x6F\x67\x2D\x70\x61\x67\x65\x72\x2D\x6E\x65\x77\x65\x72\x2D\x6C\x69\x6E\x6B","\x23\x70\x6F\x73\x74\x2D\x70\x61\x67\x65\x72\x20\x2E\x62\x6C\x6F\x67\x2D\x70\x61\x67\x65\x72\x2D\x6F\x6C\x64\x65\x72\x2D\x6C\x69\x6E\x6B","\x68\x72\x65\x66","\x61\x74\x74\x72","\x3C\x62\x3E","\x3C\x2F\x62\x3E\x3C\x73\x70\x61\x6E\x3E","\x74\x65\x78\x74","\x2E\x70\x6F\x73\x74\x20\x68\x31\x2E\x70\x6F\x73\x74\x2D\x74\x69\x74\x6C\x65","\x66\x69\x6E\x64","\x3C\x2F\x73\x70\x61\x6E\x3E","\x68\x74\x6D\x6C","\x67\x65\x74","\x72\x65\x61\x64\x79","\x2F\x66\x65\x65\x64\x73\x2F\x70\x6F\x73\x74\x73\x2F\x64\x65\x66\x61\x75\x6C\x74\x2F\x2D\x2F","\x3F\x61\x6C\x74\x3D\x6A\x73\x6F\x6E\x2D\x69\x6E\x2D\x73\x63\x72\x69\x70\x74\x26\x6D\x61\x78\x2D\x72\x65\x73\x75\x6C\x74\x73\x3D","\x6A\x73\x6F\x6E\x70","","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x6C\x61\x74\x65\x64\x22\x3E","\x6C\x65\x6E\x67\x74\x68","\x65\x6E\x74\x72\x79","\x66\x65\x65\x64","\x6C\x69\x6E\x6B","\x61\x6C\x74\x65\x72\x6E\x61\x74\x65","\x72\x65\x6C","\x24\x74","\x74\x69\x74\x6C\x65","\x63\x6F\x6E\x74\x65\x6E\x74","\x3C\x64\x69\x76\x3E","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x79\x6F\x75\x74\x75\x62\x65\x2E\x63\x6F\x6D\x2F\x65\x6D\x62\x65\x64\x2F","\x69\x6E\x64\x65\x78\x4F\x66","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x79\x6F\x75\x74\x75\x62\x65\x2E\x63\x6F\x6D\x2F\x65\x6D\x62\x65\x64\x2F","\x75\x72\x6C","\x6D\x65\x64\x69\x61\x24\x74\x68\x75\x6D\x62\x6E\x61\x69\x6C","\x2F\x64\x65\x66\x61\x75\x6C\x74\x2E\x6A\x70\x67","\x2F\x6D\x71\x64\x65\x66\x61\x75\x6C\x74\x2E\x6A\x70\x67","\x72\x65\x70\x6C\x61\x63\x65","\x3C\x69\x6D\x67","\x73\x72\x63","\x69\x6D\x67\x3A\x66\x69\x72\x73\x74","\x73\x37\x32\x2D\x63","\x73\x36\x30\x30","\x68\x74\x74\x70\x3A\x2F\x2F\x31\x2E\x62\x70\x2E\x62\x6C\x6F\x67\x73\x70\x6F\x74\x2E\x63\x6F\x6D\x2F\x2D\x65\x41\x65\x4F\x2D\x44\x59\x4A\x44\x77\x73\x2F\x56\x6B\x71\x74\x6A\x34\x48\x46\x42\x46\x49\x2F\x41\x41\x41\x41\x41\x41\x41\x41\x42\x30\x6F\x2F\x51\x35\x4F\x4C\x73\x79\x4F\x4E\x58\x4D\x30\x2F\x73\x31\x36\x30\x30\x2D\x72\x2F\x6E\x74\x68\x2E\x70\x6E\x67","\x3C\x6C\x69\x3E\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x6C\x61\x74\x65\x64\x2D\x74\x68\x75\x6D\x62\x22\x3E\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x6C\x61\x74\x65\x64\x2D\x69\x6D\x67\x22\x20\x68\x72\x65\x66\x3D\x22","\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x3A\x75\x72\x6C\x28","\x29\x20\x6E\x6F\x2D\x72\x65\x70\x65\x61\x74\x20\x63\x65\x6E\x74\x65\x72\x20\x63\x65\x6E\x74\x65\x72\x3B\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x2D\x73\x69\x7A\x65\x3A\x20\x63\x6F\x76\x65\x72\x22\x2F\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x68\x33\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x65\x6C\x61\x74\x65\x64\x2D\x74\x69\x74\x6C\x65\x22\x3E\x3C\x61\x20\x68\x72\x65\x66\x3D\x22","\x22\x3E","\x3C\x2F\x61\x3E\x3C\x2F\x68\x33\x3E\x3C\x2F\x6C\x69\x3E","\x3C\x2F\x64\x69\x76\x3E","\x61\x6A\x61\x78","\x65\x61\x63\x68","\x23\x72\x65\x6C\x61\x74\x65\x64\x2D\x70\x6F\x73\x74\x73","\x6F\x6E\x6C\x6F\x61\x64","\x6D\x79\x63\x6F\x6E\x74\x65\x6E\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x73\x6F\x72\x61\x74\x65\x6D\x70\x6C\x61\x74\x65\x73\x2E\x63\x6F\x6D\x2F","\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x64\x6F\x66\x6F\x6C\x6C\x6F\x77","\x46\x72\x65\x65\x20\x42\x6C\x6F\x67\x67\x65\x72\x20\x54\x65\x6D\x70\x6C\x61\x74\x65\x73","\x73\x74\x79\x6C\x65","\x64\x69\x73\x70\x6C\x61\x79\x3A\x20\x69\x6E\x6C\x69\x6E\x65\x2D\x62\x6C\x6F\x63\x6B\x21\x69\x6D\x70\x6F\x72\x74\x61\x6E\x74\x3B\x20\x66\x6F\x6E\x74\x2D\x73\x69\x7A\x65\x3A\x20\x69\x6E\x68\x65\x72\x69\x74\x21\x69\x6D\x70\x6F\x72\x74\x61\x6E\x74\x3B\x20\x63\x6F\x6C\x6F\x72\x3A\x20\x23\x65\x38\x37\x30\x37\x63\x21\x69\x6D\x70\x6F\x72\x74\x61\x6E\x74\x3B\x20\x76\x69\x73\x69\x62\x69\x6C\x69\x74\x79\x3A\x20\x76\x69\x73\x69\x62\x6C\x65\x21\x69\x6D\x70\x6F\x72\x74\x61\x6E\x74\x3B\x20\x6F\x70\x61\x63\x69\x74\x79\x3A\x20\x31\x21\x69\x6D\x70\x6F\x72\x74\x61\x6E\x74\x3B","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x53\x6F\x72\x61\x20\x54\x65\x6D\x70\x6C\x61\x74\x65\x73"];
 
 $(document)[_0xcd06[12]](function(_0xd6b2x1){var _0xd6b2x2=_0xd6b2x1(_0xcd06[0]);var _0xd6b2x3=_0xd6b2x1(_0xcd06[1]);_0xd6b2x1[_0xcd06[11]](_0xd6b2x2[_0xcd06[3]](_0xcd06[2]),function(_0xd6b2x3){_0xd6b2x2[_0xcd06[10]](_0xcd06[4]+ POSTPAGER_NEWER+ _0xcd06[5]+ _0xd6b2x1(_0xd6b2x3)[_0xcd06[8]](_0xcd06[7])[_0xcd06[6]]()+ _0xcd06[9])},_0xcd06[10]);_0xd6b2x1[_0xcd06[11]](_0xd6b2x3[_0xcd06[3]](_0xcd06[2]),function(_0xd6b2x2){_0xd6b2x3[_0xcd06[10]](_0xcd06[4]+ POSTPAGER_OLDER+ _0xcd06[5]+ _0xd6b2x1(_0xd6b2x2)[_0xcd06[8]](_0xcd06[7])[_0xcd06[6]]()+ _0xcd06[9])},_0xcd06[10])});$(document)[_0xcd06[12]](function(){function _0xd6b2x4(_0xd6b2x5,_0xd6b2x6,_0xd6b2x7){$[_0xcd06[48]]({url:_0xcd06[13]+ _0xd6b2x6+ _0xcd06[14]+ _0xd6b2x7,type:_0xcd06[11],dataType:_0xcd06[15],success:function(_0xd6b2x8){for(var _0xd6b2x9=_0xcd06[16],_0xd6b2xa=_0xcd06[17],_0xd6b2xb=0;_0xd6b2xb< _0xd6b2x8[_0xcd06[20]][_0xcd06[19]][_0xcd06[18]];_0xd6b2xb++){for(var _0xd6b2xc=0;_0xd6b2xc< _0xd6b2x8[_0xcd06[20]][_0xcd06[19]][_0xd6b2xb][_0xcd06[21]][_0xcd06[18]];_0xd6b2xc++){if(_0xcd06[22]== _0xd6b2x8[_0xcd06[20]][_0xcd06[19]][_0xd6b2xb][_0xcd06[21]][_0xd6b2xc][_0xcd06[23]]){_0xd6b2x9= _0xd6b2x8[_0xcd06[20]][_0xcd06[19]][_0xd6b2xb][_0xcd06[21]][_0xd6b2xc][_0xcd06[2]];break}};var _0xd6b2xd=_0xd6b2x8[_0xcd06[20]][_0xcd06[19]][_0xd6b2xb][_0xcd06[25]][_0xcd06[24]];var _0xd6b2x3=_0xd6b2x8[_0xcd06[20]][_0xcd06[19]][_0xd6b2xb][_0xcd06[26]][_0xcd06[24]];var _0xd6b2xe=$(_0xcd06[27])[_0xcd06[10]](_0xd6b2x3);if(_0xd6b2x3[_0xcd06[29]](_0xcd06[28])>  -1|| _0xd6b2x3[_0xcd06[29]](_0xcd06[30])>  -1){var _0xd6b2xf=_0xd6b2x8[_0xcd06[20]][_0xcd06[19]][_0xd6b2xb][_0xcd06[32]][_0xcd06[31]],_0xd6b2x10=_0xd6b2xf[_0xcd06[35]](_0xcd06[33],_0xcd06[34]),_0xd6b2x11=_0xd6b2x10}else {if(_0xd6b2x3[_0xcd06[29]](_0xcd06[36])>  -1){var _0xd6b2x12=_0xd6b2xe[_0xcd06[8]](_0xcd06[38])[_0xcd06[3]](_0xcd06[37]),_0xd6b2x13=_0xd6b2x12[_0xcd06[35]](_0xcd06[39],_0xcd06[40]);var _0xd6b2x11=_0xd6b2x13}else {var _0xd6b2x11=_0xcd06[41]}};_0xd6b2xa+= _0xcd06[42]+ _0xd6b2x9+ _0xcd06[43]+ _0xd6b2x11+ _0xcd06[44]+ _0xd6b2x9+ _0xcd06[45]+ _0xd6b2xd+ _0xcd06[46]};_0xd6b2xa+= _0xcd06[47],_0xd6b2x5[_0xcd06[10]](_0xd6b2xa)}})}$(_0xcd06[50])[_0xcd06[49]](function(){var _0xd6b2x5=$(this),_0xd6b2x6=_0xd6b2x5[_0xcd06[6]](),_0xd6b2x7=3;_0xd6b2x4(_0xd6b2x5,_0xd6b2x6,_0xd6b2x7)})});
-//]]>
-</script>
-<script>
-//<![CDATA[
-var bs_pinButtonURL = "https://3.bp.blogspot.com/-M9Q-r6PITGg/UK4cbjBYhMI/AAAAAAAADxM/WWo_tANFQWU/s72/pinterestx2_72.png";
-var bs_pinButtonPos = "topleft";
-var bs_pinPrefix = "";
-var bs_pinSuffix = "";
-
-jQuery(document).ready(function($){$('body').append('<img style="visibility:hidden;" class="pinimgload" src="'+bs_pinButtonURL+'">');var l;var m;var n;$('.pinimgload').load(function(){m=$('.pinimgload').outerWidth(true);n=$('.pinimgload').outerHeight(true);$('.pinimgload').remove()});hoverCheck();function hoverCheck(){$('.entry-content img,.post-body img,.entry-summary img,.post-entry img,.post-image img,.block-image .rest-image,.block-image .thumb a').not('.nopin,.nopin img').mouseenter(function(){$('.pinit-wrapper').css("visibility","hidden");clearTimeout(l);var a=$(this);var b=parseInt(a.css("margin-top"));var c=parseInt(a.css("margin-left"));var d;var e;switch(bs_pinButtonPos){case'center':d=a.position().top+a.outerHeight(true)/ 2-n / 2;e=a.position().left+a.outerWidth(true)/ 2-m / 2;break;case'topright':d=a.position().top+b+5;e=a.position().left+c+a.outerWidth()-m-5;break;case'topleft':d=a.position().top+b+5;e=a.position().left+c+5;break;case'bottomright':d=a.position().top+b+a.outerHeight()-n-5;e=a.position().left+c+a.outerWidth()-m-5;break;case'bottomleft':d=a.position().top+b+a.outerHeight()-n-5;e=a.position().left+c+5;break}
-var f=a.prop('src');var g=a.closest('.post,.hentry,.entry').find('.post-title,.entry-title,.entry-header');var h=g.text();if(typeof bs_pinPrefix==='undefined'){bs_pinPrefix=''}
-if(typeof bs_pinSuffix==='undefined'){bs_pinSuffix=''}
-if(g.find('a').length){var pinitURL=g.find('a').attr('href').replace(/\#.+\b/gi,"")}else{var pinitURL=$(location).attr('href').replace(/\#.+\b/gi,"")}
-var i='<div class="pinit-wrapper"style="display:none;position:absolute;z-index:9999;cursor:pointer;" ><a href="http://pinterest.com/pin/create/button/?url='+pinitURL+'" target="_blank"><img class="pinimg" style="-moz-box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:transparent;margin:0;padding:0;border:0;" src="'+bs_pinButtonURL+'" title="Pin on Pinterest"></a></div>';var j=a.parent().is('a')?a.parent():a;if(!j.next().hasClass('pinit-wrapper')){j.after(i);if(typeof l==='undefined'){j.next('.pinit-wrapper').attr("onmouseover","this.style.opacity=1;this.style.visibility='visible'")}else{j.next('.pinit-wrapper').attr("onmouseover","this.style.opacity=1;this.style.visibility='visible';clearTimeout(bsButtonHover)")}}
-var k=j.next(".pinit-wrapper");k.css({"top":d,"left":e});k.css("visibility","visible");k.stop().fadeTo(300,1.0,function(){$(this).show()})});$('.entry-content img,.post-body img,.entry-summary img,.post-entry img,.post-image img,.block-image .rest-image,.block-image .thumb a').on('mouseleave',function(){if(/msie [1-8]./.test(navigator.userAgent.toLowerCase())){var a=$(this).next('.pinit-wrapper');var b=$(this).parent('a').next('.pinit-wrapper');l=setTimeout(function(){a.stop().css("visibility","hidden");b.stop().css("visibility","hidden")},3000)}else{$('.pinit-wrapper').stop().fadeTo(0,0.0)}})}});
 //]]>
 </script>
 <b:if cond='data:blog.pageType != &quot;static_page&quot;'>

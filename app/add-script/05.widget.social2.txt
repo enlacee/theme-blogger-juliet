@@ -1,0 +1,71 @@
+<b:widget id='HTML2' locked='false' title='Social' type='HTML' version='1'>
+	<b:widget-settings>
+		<b:widget-setting name='content'>&lt;div class=&quot;icons-social&quot;&gt;
+&lt;ul id=&quot;social&quot;&gt;
+&lt;li&gt;&lt;a class=&quot;facebook&quot; href=&quot;#&quot; title=&quot;facebook&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;twitter&quot; href=&quot;#&quot; title=&quot;twitter&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;gplus&quot; href=&quot;#&quot; title=&quot;gplus&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;linkedin&quot; href=&quot;#&quot; title=&quot;linkedin&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;instagram&quot; href=&quot;#&quot; title=&quot;instagram&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&quot;pinterest&quot; href=&quot;#&quot; title=&quot;pinterest&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+&lt;style&gt;.icons-social li {
+display: inline-block;
+padding: 0;
+}
+.icons-social ul {
+	display: inline-block;
+}
+.icons-social {
+	text-align: center;
+}
+.icons-social #social a {
+display: block;
+	margin-right: 15px;
+	color: #333;
+	text-align: center;
+	font-size: 20px;
+}
+.icons-social #social a:before {
+display: inline-block;
+font: normal normal normal 22px/1 FontAwesome;
+font-size: inherit;
+font-style: normal;
+font-weight: 400;
+line-height: 42px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.icons-social .facebook:before {
+content: &quot;\f09a&quot;;
+}
+.icons-social .twitter:before {
+content: &quot;\f099&quot;;
+}
+.icons-social .gplus:before {
+content: &quot;\f0d5&quot;;
+}
+.icons-social .linkedin:before {
+content: &quot;\f0e1&quot;;
+}
+.icons-social .instagram:before {
+content: &quot;\f16d&quot;;
+}
+.icons-social .pinterest:before {
+content: &quot;\f0d2&quot;;
+}
+&lt;/style&gt;</b:widget-setting>
+	</b:widget-settings>
+
+	<b:includable id='main'>
+		<!-- only display title if it's non-empty -->
+		<b:if cond='data:title != &quot;&quot;'>
+		<h2 class='title'><data:title/></h2>
+		</b:if>
+		<div class='widget-content'>
+		<data:content/>
+		</div>
+		<div class='clear'/>
+		<!--b:include name='quickedit'/-->
+	</b:includable>
+</b:widget>
